@@ -1,0 +1,25 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { BookingComponent } from './component/home/booking/booking.component';
+import { DashboardComponent } from './component/home/dashboard/dashboard.component';
+import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './component/home/login/login.component';
+import { ManageResourceComponent } from './component/home/manage-resource/manage-resource.component';
+
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot([
+  { path: '', component: HomeComponent },
+  { path: 'home/login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home/booking', component: BookingComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'resources', component: ManageResourceComponent },
+])
+],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
