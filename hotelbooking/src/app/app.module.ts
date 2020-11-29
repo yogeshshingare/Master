@@ -20,6 +20,11 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { ManageRoomsComponent } from './component/home/manage-resource/manage-rooms/manage-rooms.component';
+import { AmenitiesComponent } from './component/home/manage-resource/amenities/amenities.component';
 
 
 
@@ -31,16 +36,21 @@ import { HttpClientModule } from '@angular/common/http';
     BookingComponent,
     DashboardComponent,
     ManageResourceComponent,
-    NavigationComponent
+    NavigationComponent,
+    ManageRoomsComponent,
+    AmenitiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatSelectModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
-    ,MatListModule,
+    MatButtonModule,
+    MatListModule,
     MatMenuModule,
     FormsModule,
     ReactiveFormsModule,

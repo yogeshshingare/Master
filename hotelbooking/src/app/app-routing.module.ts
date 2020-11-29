@@ -5,6 +5,7 @@ import { DashboardComponent } from './component/home/dashboard/dashboard.compone
 import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/home/login/login.component';
 import { ManageResourceComponent } from './component/home/manage-resource/manage-resource.component';
+import { ManageRoomsComponent } from './component/home/manage-resource/manage-rooms/manage-rooms.component';
 
 
 const routes: Routes = [];
@@ -18,6 +19,7 @@ const routes: Routes = [];
   { path: 'home/booking', component: BookingComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'resources', component: ManageResourceComponent },
+  { path: 'rooms', component: ManageRoomsComponent },
 ])
 ],
   exports: [RouterModule]
