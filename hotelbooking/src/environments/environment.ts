@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyAj7__gL_m-kMbVrmYc2cgqRfTm7NusnQ8",
+    authDomain: "sing-king-cms.firebaseapp.com",
+    databaseURL: "https://sing-king-cms.firebaseio.com",
+    projectId: "sing-king-cms",
+    storageBucket: "sing-king-cms.appspot.com",
+    messagingSenderId: "833410120245"
+  },
+  baseUrl:'https://us-central1-sing-king-cms.cloudfunctions.net/api' 
 };
 
 /*

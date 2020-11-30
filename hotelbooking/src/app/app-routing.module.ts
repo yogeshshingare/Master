@@ -6,6 +6,7 @@ import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/home/login/login.component';
 import { ManageResourceComponent } from './component/home/manage-resource/manage-resource.component';
 import { ManageRoomsComponent } from './component/home/manage-resource/manage-rooms/manage-rooms.component';
+import { AmenitiesComponent } from './component/home/manage-resource/amenities/amenities.component';
 
 
 const routes: Routes = [];
@@ -20,6 +21,7 @@ const routes: Routes = [];
   { path: 'dashboard', component: DashboardComponent },
   { path: 'resources', component: ManageResourceComponent },
   { path: 'rooms', component: ManageRoomsComponent },
+  { path: 'amenities', component: AmenitiesComponent },
 ])
 ],
   exports: [RouterModule]

@@ -40,7 +40,16 @@ p{
     background: #F2F2F2;
     border-radius: 5px;
   }
+  
+  .btn-color1{
+    background-color: #f87d37 !important;
+    color:white !important;
+    left: 70%;
     
+    /* top: 20%; */
+    position: absolute;
+    bottom:84%;
+  }
   .btn-color{
     background-color: #f87d37 !important;
     color:white !important;
