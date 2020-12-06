@@ -25,7 +25,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ManageRoomsComponent } from './component/home/manage-resource/manage-rooms/manage-rooms.component';
 import { AmenitiesComponent } from './component/home/manage-resource/amenities/amenities.component';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -57,7 +59,10 @@ import { AmenitiesComponent } from './component/home/manage-resource/amenities/a
     MatIconModule,
     MatSidenavModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule
   
   ],
   providers: [],

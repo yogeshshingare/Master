@@ -2,11 +2,8 @@ p{
     margin-left: 20%;
     margin-top: -23%;
 }
-/* .list{
-    margin-left: 20%;
-    margin-top: -100%;
-} */
-.agreement-position{
+
+.resource-position{
     position: absolute;
     top: -1%;
     font-family: Open Sans;
@@ -19,26 +16,6 @@ p{
   .back-button{
     color: #161616;
     margin-left: 12px;
-  }
-  
-  .search-bar-position{
-    position: absolute;
-    /* top: 20%; */
-    left:15%;
-  }
-    
-  .search-bar {
-    position: relative;
-    width: 490px;
-    height: 24px;
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    outline: none;
-    padding: 6px 16px 6px 30px;
-    font-size: 16px;
-    line-height: 25px;
-    margin-left: 64px;
-    background: #F2F2F2;
-    border-radius: 5px;
   }
   
   .btn-color1{
@@ -55,7 +32,6 @@ p{
     color:white !important;
     left: 80%;
     
-    /* top: 20%; */
     position: absolute;
     bottom:84%;
   }
@@ -66,42 +42,24 @@ p{
   }
   
   table {
-    width: 100%;
+    width: 50%;
   }
   
-  .agreement-history{
+  .resource-history{
     table-layout: fixed;
   }
   
   .table-container{
-      margin-top:13%;
+    margin-left: 18%;
+    margin-top: -22%;
   }
   
   .tabel-content{
       margin: 10px 11px;
-      width: 98%;
+      width: 60%;
   }
   
-  .mat-column-Subscriber_Type {
-    width: 12% !important;
-  }
-  
-  .mat-column-Rights_Type {
-    width: 12% !important;
-  }
-  
-  .mat-column-Agreement_Start_Date {
-    width: 12% !important;
-  }
-  
-  .mat-column-Agreement_End_Date {
-    width: 12% !important;
-  }
-  .mat-column-Agreement_UID {
-    width: 12% !important;
-  }
-  
-  .agreement-history th, td {
+  .resource-history th, td {
     overflow: hidden;
     width: inherit;
     text-overflow: ellipsis;

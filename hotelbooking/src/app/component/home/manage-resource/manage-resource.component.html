@@ -1,25 +1,21 @@
 <app-navigation></app-navigation>
 <!-- <mat-sidenav-container>
 <mat-sidenav-content> -->
-<p >Resources works!</p>
 
 <div class="list" >
     <div>
       <span class="back-button"><i class="zmdi zmdi-arrow-left back-button-cursor"
           [routerLink]="['/']"></i></span>
-      <p class="agreement-position">Resources Details</p>
-      <div class="search-bar-position">
-        <input matInput class="search-bar">
-        <i class="zmdi zmdi-search search-icon-position"></i>
-      </div>
+      <p class="resource-position">Resources Details</p>
+      
       <button mat-raised-button class="btn-color1" routerLink="/amenities">Add Amenities</button>
       <button mat-raised-button class="btn-color" routerLink="/rooms">Add Rooms</button>
       <div class="partition-line"></div>
     </div>
     <div class="table-container">
-      <table mat-table  matSort class="mat-elevation-z8 tabel-content agreement-history">
+      <table mat-table [dataSource]="tableData"  matSort class="mat-elevation-z8 tabel-content resource-history">
         <!-- <ng-container matColumnDef="id"> -->
-          <th class="w-150" mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+          <!-- <th class="w-150" mat-header-cell *matHeaderCellDef mat-sort-header> Id </th> -->
           <!-- <td mat-cell *matCellDef="let element">
             <a [routerLink]="getRoomsDetailId(element.ID)">
               <span>{{element.ID}}</span>

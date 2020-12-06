@@ -6,6 +6,12 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { RoomService } from 'src/app/services/rooms.service';
 import { RoomtDetailModel, Room } from 'src/app/_model/rooms.model';
 
+export interface RoomData {
+  id: string;
+  Room_Name: number;
+  Amenities: number;
+  Type: string;
+}
 
 @Component({
   selector: 'app-manage-resource',
@@ -15,23 +21,27 @@ import { RoomtDetailModel, Room } from 'src/app/_model/rooms.model';
 export class ManageResourceComponent implements OnInit {
 
   displayedColumns: string[] = [
-    "id", "Room_Name", "Amenities", "Type"
+     "Room_Name", "Amenities", "Type"
   ];
   publisherId: any;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-
+  data:RoomData[]=[];
   // @ViewChild(PublisherDetailComponent)
   // public publisherForm: PublisherDetailComponent;
 
   public roomDetail: RoomtDetailModel = new RoomtDetailModel();
-  listData: MatTableDataSource<any>;
+  tableData: MatTableDataSource<any>;
 
   constructor(private _router: Router, private room: RoomService,  private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this._activatedRoute.params.subscribe(params => { this.publisherId = params['id'] }, error => { });
     this.loadAgreements();
+    
+    this.tableData = new MatTableDataSource(this.data);
+    this.tableData.sort = this.sort;
+    this.tableData.paginator = this.paginator;
   }
 
   //make the call to the node app to fetch all the agreement by publisher uid
@@ -55,9 +65,9 @@ export class ManageResourceComponent implements OnInit {
         if (responseObj['success']) {
           this.roomDetail = new RoomtDetailModel().fromServerObject(responseObj);
           this.roomDetail.room.sort((a, b) => b.ID - a.ID);
-          this.listData = new MatTableDataSource(this.roomDetail.room);
-          this.listData.sort = this.sort;
-          this.listData.paginator = this.paginator;
+          this.tableData = new MatTableDataSource(this.roomDetail.room);
+          this.tableData.sort = this.sort;
+          this.tableData.paginator = this.paginator;
         }
       });
   }

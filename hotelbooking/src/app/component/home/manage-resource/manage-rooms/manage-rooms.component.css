@@ -25,13 +25,13 @@ p{
   margin-left: 6% !important;
 }
 
-.agreement-actions{
+.room-actions{
   position: absolute;
   top: 11%;
   left:4%;
 }
 
-.agreement-actions .zmdi-hc-lg {
+.room-actions .zmdi-hc-lg {
    font-size: initial !important;
    margin-left: 11px;
 }
@@ -51,7 +51,7 @@ p{
   position: relative;
 }
 
-.input-agreement-details{
+.input-room-details{
   margin-right: 70px;
   font-family: Open Sans;
   font-style: normal;
@@ -70,7 +70,7 @@ p{
   
 }
 
-.agreement-save-btn{
+.room-save-btn{
   background-color: #f87d37 !important;
   color: white !important;
 }
@@ -106,7 +106,7 @@ p{
   margin-top: 25% !important;
 }
 
-.agreement-save-btn-disabled{
+.room-save-btn-disabled{
   border: 1px solid #999999 !important;
 background-color: #cccccc !important;
 color: #666666 !important;
@@ -116,7 +116,7 @@ color: #666666 !important;
   width:23% !important;
 }
 
-::ng-deep #agreement-detail .mat-figure{
+::ng-deep #room-detail .mat-figure{
   display: inline-block !important;
 }
 
@@ -128,12 +128,12 @@ color: #666666 !important;
   font-size: 60% !important;
 }
 
-.duplicate-agreement-save-btn{
+.duplicate-room-save-btn{
   background-color: #f87d37 !important;
   color: white !important;
 }
 
-.duplicate-agreement-save-btn:disabled{
+.duplicate-room-save-btn:disabled{
   border: 1px solid #999999 !important;
   background-color: #cccccc !important;
   color: #666666 !important;

@@ -8672,7 +8672,7 @@
       display: block; }
       .ftco-book .appointment-form .form-group .icon {
         position: absolute;
-        top: 50% !important;
+        top: 30% !important;
         right: 10px;
         font-size: 16px;
         -webkit-transform: translateY(-50%);
@@ -9455,3 +9455,16 @@
       stroke-dasharray: 89, 200;
       stroke-dashoffset: -136px; } }
   
+
+      ::ng-deep .name_div .mat-form-field-infix{
+        width: 330px !important;
+      }
+
+
+      ::ng-deep .others-field .mat-form-field-infix{
+        width: 98% !important;
+      }
+
+      .date-width{
+        width:98% !important;
+      }
