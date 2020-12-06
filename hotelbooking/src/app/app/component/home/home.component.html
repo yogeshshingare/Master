@@ -1,0 +1,213 @@
+<!-- 
+<div style="height: 20vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Responsive Navigation</span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+
+<!-- <a mat-button class="login-button" mat-button [routerLink]="['/home/login']">Login </a>
+       <a mat-button class="booking-button" mat-button [routerLink]="['/home/booking']">Booking </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill  style="height: 80vh;">
+    <mat-sidenav #sidenav>
+      <mat-nav-list >
+        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+        <a href="#" mat-list-item>Menu Item 1</a>
+        <a href="#" mat-list-item>Menu Item 2</a>
+        <a href="#" mat-list-item>Menu Item 3</a>
+        <a href="#" mat-list-item>Menu Item 4</a>
+        <a href="#" mat-list-item>Menu Item 5</a>
+        <a href="#"mat-list-item>Menu Item 6</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+  </mat-sidenav-container>
+</div> -->
+
+<div class="wrap">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col d-flex align-items-center">
+				<!-- <p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#"></a> or <span class="mailus">email us:</span> <a href="#"></a></p> -->
+			</div>
+			<div class="col d-flex justify-content-end">
+				<div class="social-media">
+					<!--<p class="mb-0 d-flex">
+				    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+				    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+				    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+				    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+				    		</p>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light fixed-top " id="ftco-navbar">
+	<div class="container">
+		<a class="navbar-brand" href="index.html">Easy <span>Booking</span></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+			aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span> Menu
+		</button>
+		<div class="collapse navbar-collapse " id="ftco-nav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a mat-button [routerLink]="['/home/booking']" class="nav-link">Home</a>
+				</li>
+
+
+				<!-- <li class="nav-item"><a href="about.html" class="nav-link">About</a></li> -->
+				<!-- <li class="nav-item"><a  mat-button [routerLink]="['/home/booking']" class="nav-link">Booking </a></li> -->
+				<li class="nav-item"><a mat-button [routerLink]="['/home/login']" class="nav-link">Login </a></li>
+				<li class="nav-item"><a mat-button [routerLink]="['/home/login']" class="nav-link">Services</a></li>
+				<li class="nav-item"><a pageScroll mat-button href="#rooms" class="nav-link">Room</a></li>
+				<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Login</a></li> -->
+				<!--<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>-->
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- END nav -->
+
+<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');"
+	data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+			data-scrollax-parent="true">
+			<div class="col-md-7 ftco-animate">
+				<h2 class="subheading"></h2>
+				<h1 class="mb-4"></h1>
+				<p><a href="#" class="btn btn-primary">Learn more</a> <a href="#" class="btn btn-white">Contact us</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="ftco-section ftco-book ftco-no-pt ftco-no-pb">
+	<div class="container">
+		<div class="row justify-content-end">
+			<div class="col-lg-4">
+				<form [formGroup]="myGroup" class="appointment-form">
+					<h3 class="mb-3">Book your Room</h3>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group name_div">
+								<mat-form-field class="input-agreement-details">
+									<input matInput formControlName="roomName" placeholder="Full Name"
+										class="form-control">
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group others-field">
+								<div class="input-wrap">
+									<div class="icon"><span class="ion-md-calendar"></span></div>
+									<mat-form-field class="date-width margin-25px">
+										<mat-label>Check In</mat-label>
+										<input matInput [formControl]="checkin" [matDatepicker]="picker">
+										<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+										<mat-datepicker #picker></mat-datepicker>
+									</mat-form-field>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group others-field">
+								<div class="input-wrap">
+									<div class="icon"><span class="ion-md-calendar"></span></div>
+									<mat-form-field class="date-width margin-25px">
+										<mat-label>Check Out</mat-label>
+										<input matInput [formControl]="checkout" [matDatepicker]="picker">
+										<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+										<mat-datepicker #picker></mat-datepicker>
+									</mat-form-field>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="form-field">
+									<div class="select-wrap">
+										<div class="icon"><span class="fa fa-chevron-down"></span></div>
+										<mat-form-field class="form-control input-room-details">
+											<mat-label>Adults</mat-label>
+											<mat-select formControlName="Adults" placeholder="Adults"
+												class="input-room-details" panelClass="territoryPanelClass">
+												<mat-option>
+													1
+												</mat-option>
+												<mat-option>
+													2
+												</mat-option>
+												<mat-option>
+													3
+												</mat-option>
+												<mat-option>
+													4
+												</mat-option>
+											</mat-select>
+										</mat-form-field>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="form-field">
+									<div class="select-wrap">
+										<div class="icon"><span class="fa fa-chevron-down"></span></div>
+										<mat-form-field class="form-control input-room-details">
+											<mat-label>Child</mat-label>
+											<mat-select formControlName="Child" placeholder="Child"
+												class="input-room-details" panelClass="territoryPanelClass">
+												<mat-option>
+													1
+												</mat-option>
+												<mat-option>
+													2
+												</mat-option>
+												<mat-option>
+													3
+												</mat-option>
+												<mat-option>
+													4
+												</mat-option>
+											</mat-select>
+										</mat-form-field>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group name_div">
+								<mat-form-field>
+									<input matInput formControlName="phoneNumber" placeholder="Phone number"
+										class="form-control">
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="submit" value="Book Room Now" class="btn btn-primary py-3 px-4">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- <footer class="footer">
+
+	</footer> -->

@@ -1,0 +1,53 @@
+<app-navigation></app-navigation>
+<!-- <mat-sidenav-container>
+<mat-sidenav-content> -->
+<p>Resources works!</p>
+<!-- </mat-sidenav-content></mat-sidenav-container> -->
+<div class="container">
+  <div [hidden]="submitted">
+    <h1></h1>
+    <!-- ====================================================  -->
+    <div>
+      <form [formGroup]="myGroup">
+
+        <!-- ... all of the form ... -->
+        <!-- <mat-grid-tile> -->
+        <div>
+          <mat-form-field class="input-room-details">
+            <mat-label>Room Name</mat-label>
+            <input matInput formControlName="roomName" placeholder="Room Name" class="input-room-details"
+              [(ngModel)]="model.name" [disabled]="true">
+          </mat-form-field>
+
+          <input type="file" placeholder="Basic Input">
+        </div>
+        <div>
+          <mat-form-field class="input-room-details">
+            <mat-label>Amenities</mat-label>
+            <mat-select formControlName="amenities" placeholder="Amenities" class="input-room-details"
+              panelClass="territoryPanelClass" multiple>
+              <mat-option *ngFor="let item of powers" [value]="item">
+                {{item}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="input-room-details">
+            <mat-label>Type</mat-label>
+            <mat-select formControlName="amenities" placeholder="Amenities" class="input-room-details"
+              panelClass="territoryPanelClass" multiple>
+              <mat-option *ngFor="let item of powers" [value]="item">
+                {{item}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <mat-grid-list cols="1">
+
+          <button mat-raised-button *ngIf="!myGroup.invalid" class="room-save-btn" (click)="onSubmit()"
+            routerLink="/resources">Save</button>
+          <button mat-raised-button *ngIf="myGroup.invalid" class="room-save-btn-disabled" disabled>Save</button>
+        </mat-grid-list>
+
+      </form>
+    </div>
+    <!-- ====================================================  -->
